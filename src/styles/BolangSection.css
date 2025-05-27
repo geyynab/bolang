@@ -1,0 +1,19 @@
+.smart-nation {
+  display: flex;
+  padding: 40px 20px;
+  background: white;
+}
+.smart-nation .text {
+  flex: 1;
+  padding-right: 20px;
+}
+.smart-nation .video {
+  flex: 1;
+}
+.smart-nation button {
+  padding: 10px 20px;
+  background-color: #e60012;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
