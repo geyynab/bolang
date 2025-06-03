@@ -1,0 +1,27 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  text-align: center;
+}
+
+h1 {
+  margin: 16px 0;
+  color: #2c3e50;
+}
+
+.map-container {
+  height: 85vh;
+  width: 100%;
+}
+
+.popup-image {
+  width: 100%;
+  max-width: 150px;
+  margin-top: 5px;
+  border-radius: 8px;
+}
