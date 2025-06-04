@@ -1,37 +1,23 @@
-// import React from 'react';
-// import Header from './components/Header';
-// import HeroSection from './components/HeroSection';
-// import BolangSectionSection from './components/BolangSection';
-// import Initiatives from './components/Initiatives';
-// import Popular from './components/Popular';
-// import Footer from './components/Footer';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Header />
-//       <HeroSection />
-//       <BolangSectionSection />
-//       <Initiatives />
-//       <Popular />
-//       <Footer />
-//     </div>
-//   );
-// }
-
-// export default App;
 
 import React from "react";
-import "./App.css";
-import MapView from "./components/MapView";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Wisatapage from "../src/components/map.js"
+import LoginPage from "../src/components/loginpage.js";
+import RegisterPage from "../src/components/register.js";
 
-function App() {
-  return (
-    <div className="app">
-      <h1>Bolang</h1>
-      <MapView />
-    </div>
-  );
+function Dashboard() {
+  return <div className="p-10">Welcome to the Dashboard</div>;
 }
 
-export default App;
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Wisatapage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/register" element={<RegisterPage />} />
+      </Routes>
+    </Router>
+  );
+}

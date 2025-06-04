@@ -1,19 +1,18 @@
-import React from 'react';
-import '../styles/Header.css';
+import React from "react";
+import logo from "../assets/logo_bolang.png";
+import styles from "../styles/header.module.css";
 
-function Header() {
+export default function Header() {
   return (
-    <header className="header">
-      <div className="logo">Smart Nation</div>
-      <nav className="nav">
-        <a href="#">About</a>
-        <a href="#">Initiatives</a>
-        <a href="#">Apps</a>
-        <a href="#">Resources</a>
-        <a href="#">Happenings</a>
+    <header className={styles.header}>
+      <img src={logo} alt="Logo Bolang" className={styles.logo} />
+      <h1 className={styles.title}>Web GIS Wisata Bolang</h1>
+      <nav className={styles.nav}>
+        {/* Contoh nav, bisa kamu isi nanti */}
+        <a href="/" className={styles.navLink}>Home</a>
+        <a href="/about" className={styles.navLink}>About</a>
+        <a href="/contact" className={styles.navLink}>Contact</a>
       </nav>
     </header>
   );
 }
-
-export default Header;
