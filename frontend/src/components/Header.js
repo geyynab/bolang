@@ -1,18 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/header.css";
 import logo from "../assets/logo_bolang.png";
-import styles from "../styles/header.module.css";
+import defaultAvatar from "../assets/avatar.jpg";
 
 export default function Header() {
   return (
-    <header className={styles.header}>
-      <img src={logo} alt="Logo Bolang" className={styles.logo} />
-      <h1 className={styles.title}>Web GIS Wisata Bolang</h1>
-      <nav className={styles.nav}>
-        {/* Contoh nav, bisa kamu isi nanti */}
-        <a href="/" className={styles.navLink}>Home</a>
-        <a href="/about" className={styles.navLink}>About</a>
-        <a href="/contact" className={styles.navLink}>Contact</a>
-      </nav>
+    <header className="main-header">
+      <div className="header-left">
+        <Link to="/">
+          <img src={logo} alt="Bolang Logo" className="header-logo" />
+        </Link>
+      </div>
+
+      <div className="header-right">
+        <Link to="/profile" className="profile-link">
+          <img src={defaultAvatar} alt="User" className="profile-avatar-small" />
+        </Link>
+      </div>
     </header>
   );
 }
